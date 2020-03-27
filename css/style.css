@@ -179,3 +179,29 @@ h1{
     background-attachment: fixed;
     z-index: -1;
 }
+
+/*Cards*/
+.fm-cards{
+    background: #f6f6f6;
+}
+
+.fm-card-top{
+    text-align: center;
+    font-size: 35px;
+    color: #009dd6;
+}
+
+.fm-card-body{
+    font-size: 14px;
+    text-align: center;
+}
+
+.fm-card-body h4{
+    font-family: Montserrat-Medium;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.fm-card-body p{
+    color: #8d8d8d;
+}
