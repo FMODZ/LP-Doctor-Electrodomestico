@@ -1,0 +1,155 @@
+@font-face{
+    font-family: Anton;
+    src: url(../fonts/Anton-Regular.ttf);
+}
+
+@font-face{
+    font-family: Montserrat-Medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+/*Utilidades*/
+
+/*Botones*/
+.fm-btn{
+    border: none;
+    padding: 20px;
+}
+
+.fm-btn-main{
+    color: white;
+    background-color: #01aded;
+    transition: all .5s;
+}
+
+.fm-btn-main:hover{
+    color: white;
+    background-color: #009dd6;
+}
+
+/*Textos*/
+h1{
+    font-family: Anton;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+
+
+
+/*Estilos de la barra de navegación*/
+
+.fm-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.fm-nav-left{
+    right: 40px;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    position: relative;
+    padding: 20px 40px 20px;
+    z-index: 1;
+}
+
+.fm-nav-left::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #ffffff;
+    transform: skewX(16deg);
+    transform-origin: 50% 100%;
+    will-change: transform;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.fm-nav-right{
+    position: relative;
+}
+
+.fm-nav-img{
+    width: 100px;
+}
+
+.fm-nav-top{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    padding: 8px;
+    list-style-type: none;
+    margin: 0;   
+}
+
+.fm-nav-top-item{
+    padding-left: 20px;
+}
+
+.fm-nav-top::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    background: #ffffff;
+    transform: skewX(16deg);
+    transform-origin: 50% 90%;
+    will-change: transform;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.fm-nav-main{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.fm-nav-item{
+    padding: 10px 15px;
+}
+
+.item-main{
+    font-weight: 500;
+    position: relative;
+    padding: 30px;
+    cursor: pointer;
+}
+
+.item-main::before{
+    content: '';
+    position: absolute;
+    background-color: #01aded;
+    transition: width .5s;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    width: 0;
+}
+
+.item-main:hover::before{
+    width: 100%;
+}
+
