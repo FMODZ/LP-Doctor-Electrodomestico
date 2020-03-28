@@ -1,0 +1,262 @@
+@font-face{
+    font-family: Anton;
+    src: url(../fonts/Anton-Regular.ttf);
+}
+
+@font-face{
+    font-family: Montserrat-Medium;
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+$principal-color: #01aded;
+$secondary-color: #003C6B;
+$bg-color: #f6f6f6;
+$p-size: 16px;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: $p-size;
+}
+
+%fm-btn{
+    border: none;
+    padding: 20px;
+}
+
+%fm-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fmBotones($color, $fondo){
+    color: $color;
+    background-color: #01aded;
+    transition: all .5s;
+}
+
+.fm-btn-main{
+    @extend %fm-btn;
+    @include fmBotones(white, $principal-color);
+
+    &:hover{
+        background-color: $secondary-color;
+    }
+}
+
+/*Textos*/
+h1{
+    font-family: Anton;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+/*Colores*/
+.fm-bg-gray{
+    background-color: $bg-color;
+}
+
+/*Estilos de la barra de navegación*/
+.fm-nav{
+    @extend %fm-center;
+    background-color: $bg-color;
+
+    .fm-nav-left{
+        position: relative;
+        right: 40px;
+        box-sizing: border-box;
+        display: flex;
+        padding: 20px 40px 20px;
+        z-index: 1;
+    
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            background: #ffffff;
+            transform: skewX(16deg);
+            transform-origin: 50% 100%;
+            will-change: transform;
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
+
+    .fm-nav-right{
+        position: relative;
+    }
+    
+    .fm-nav-img{
+        width: 100px;
+    }
+    
+    .fm-nav-top{
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+        padding: 8px;
+        list-style-type: none;
+        margin: 0;   
+    
+        &::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            background: #ffffff;
+            transform: skewX(16deg);
+            transform-origin: 50% 90%;
+            will-change: transform;
+            pointer-events: none;
+            z-index: -1;
+        }
+    }
+    
+    .fm-nav-main{
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+    }
+    
+    .fm-nav-item{
+        padding: 10px 15px;
+    }
+    
+    .item-main{
+        font-weight: 500;
+        position: relative;
+        padding: 30px;
+        cursor: pointer;
+    
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: $principal-color;
+            transition: width .5s;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 0;
+        }
+    
+        &:hover::before{
+            width: 100%;
+        }
+    }
+}
+
+.fm-image-main{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: brightness(60%);
+        background-image: url('../img/principal.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+
+    .fm-main-text{
+        font-size: 24px;
+    }
+}
+
+.fm-cards{
+    background-color: $bg-color;
+
+    .fm-card-top{
+        text-align: center;
+        font-size: 35px;
+        color: $principal-color;
+    }
+
+    .fm-card-body{
+        font-size: 14px;
+        text-align: center;
+
+        h4{
+            font-family: Montserrat-Medium;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        p{
+            color: #8d8d8d;
+        }
+    }
+}
+
+.fm-services{
+    background-color: #fff;
+
+    .fm-subtitle-top{
+        position: relative;
+        @extend %fm-center;
+        flex-direction: column;
+    }
+
+    .fm-subtitle{
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            background-color: $principal-color;
+        }
+    }
+
+    .fm-services{
+        background: #ffffff;
+    }
+    
+    .fm-card-title{
+        text-transform: uppercase;
+        color: $principal-color;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
