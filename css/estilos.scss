@@ -244,6 +244,61 @@ h1{
 
 }
 
+/*Por que elegirnos*/
+.fm-why{
+    position: relative;
+    z-index: 1;
+
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: url(../img/maintenance.jpeg);
+        filter: brightness(60%);
+        background-size: cover;
+        background-position:center ;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+
+    .fm-subtitle{
+        text-align: center;
+        font-family: Anton;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .fm-card-why{
+        min-height: 156px;
+        position: relative;
+        border: 1px solid white;
+        
+        p{
+            transition: all 500ms ease;
+            cursor: default;
+        }
+
+        &:hover p{
+            color: $principal-color !important;
+        }
+
+        .fm-card-why-top{
+            width: 100%;
+            font-weight: 500;
+            font-size: 20px;
+            transition: all 500ms ease;
+            .fm-why-icon{
+                text-align: left;
+                color: $principal-color;
+                font-size: 36px;
+            }
+        }
+        
+    }
+}
+
 
 
 

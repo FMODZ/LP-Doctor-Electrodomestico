@@ -208,4 +208,52 @@ h1 {
   color: #01aded;
 }
 
+/*Por que elegirnos*/
+.fm-why {
+  position: relative;
+  z-index: 1;
+}
+.fm-why::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(../img/maintenance.jpeg);
+  filter: brightness(60%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -1;
+}
+.fm-why .fm-subtitle {
+  text-align: center;
+  font-family: Anton;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+.fm-why .fm-card-why {
+  min-height: 156px;
+  position: relative;
+  border: 1px solid white;
+}
+.fm-why .fm-card-why p {
+  transition: all 500ms ease;
+  cursor: default;
+}
+.fm-why .fm-card-why:hover p {
+  color: #01aded !important;
+}
+.fm-why .fm-card-why .fm-card-why-top {
+  width: 100%;
+  font-weight: 500;
+  font-size: 20px;
+  transition: all 500ms ease;
+}
+.fm-why .fm-card-why .fm-card-why-top .fm-why-icon {
+  text-align: left;
+  color: #01aded;
+  font-size: 36px;
+}
+
 /*# sourceMappingURL=styles.css.map */
