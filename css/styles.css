@@ -18,12 +18,31 @@ body {
   font-size: 16px;
 }
 
+input[type=text] {
+  background-color: transparent;
+  color: white;
+}
+input[type=text]:focus {
+  background-color: transparent;
+  color: white;
+}
+
+textarea {
+  resize: none;
+  background-color: transparent !important;
+  color: white !important;
+}
+textarea:focus {
+  background-color: transparent !important;
+  color: white !important;
+}
+
 .fm-btn-main {
   border: none;
   padding: 20px;
 }
 
-.fm-testimonials .fm-subtitle-top, .fm-services .fm-subtitle-top, .fm-nav {
+.fm-contact .fm-subtitle-top, .fm-testimonials .fm-subtitle-top, .fm-services .fm-subtitle-top, .fm-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,7 +320,7 @@ h1 {
   font-size: 26px;
   margin-bottom: 15px;
   margin-top: 25px;
-  color: black;
+  color: #003C6B;
 }
 .fm-testimonials .carousel-caption p {
   color: #8b8b8b;
@@ -317,6 +336,41 @@ h1 {
 .carousel-control-next,
 .carousel-control-prev {
   filter: invert(1);
+}
+
+.fm-contact {
+  background-color: #003C6B;
+}
+.fm-contact .fm-subtitle-top {
+  position: relative;
+  flex-direction: column;
+}
+.fm-contact .fm-subtitle {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+.fm-contact .fm-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #01aded;
+}
+.fm-contact .fm-ul-contact {
+  list-style-type: none;
+  color: #fff;
+}
+.fm-contact .fm-ul-contact .fm-ul-item {
+  margin: 20px 0;
+  font-size: 22px;
+  transition: all 500ms ease;
+  cursor: default;
+}
+.fm-contact .fm-ul-contact .fm-ul-item:hover, .fm-contact .fm-ul-contact .fm-ul-item .fm-icon {
+  color: #01aded;
 }
 
 /*# sourceMappingURL=styles.css.map */

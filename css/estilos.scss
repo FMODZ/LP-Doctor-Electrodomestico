@@ -24,6 +24,28 @@ body{
     font-size: $p-size;
 }
 
+input[type="text"]{
+    background-color: transparent;
+    color: white;
+
+    &:focus{
+        background-color: transparent;
+        color: white;
+    }
+}
+
+textarea{
+    resize: none;
+    background-color: transparent !important;
+    color: white !important;
+
+    &:focus{
+        background-color: transparent !important;
+        color: white !important;
+    }
+   
+}
+
 %fm-btn{
     border: none;
     padding: 20px;
@@ -350,7 +372,7 @@ h1{
             font-size: 26px;
             margin-bottom: 15px;
             margin-top: 25px;
-            color: black;
+            color: $secondary-color;
         }
 
         p{
@@ -370,6 +392,51 @@ h1{
 .carousel-control-next,
 .carousel-control-prev{
     filter: invert(1);
+}
+
+.fm-contact{
+    background-color: $secondary-color;
+
+    .fm-subtitle-top{
+        position: relative;
+        @extend %fm-center;
+        flex-direction: column;
+    }
+
+    .fm-subtitle{
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            background-color: $principal-color;
+        }
+    }
+
+    .fm-ul-contact{
+        list-style-type: none;
+        color: #fff;
+
+        .fm-ul-item{
+            margin: 20px 0;
+            font-size: 22px;
+            transition: all 500ms ease;
+            cursor: default;
+
+            &:hover, .fm-icon{
+                color: $principal-color;
+            }
+
+            
+        }
+    }
+
 }
 
 
