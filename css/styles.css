@@ -23,7 +23,7 @@ body {
   padding: 20px;
 }
 
-.fm-services .fm-subtitle-top, .fm-nav {
+.fm-testimonials .fm-subtitle-top, .fm-services .fm-subtitle-top, .fm-nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,14 +210,18 @@ h1 {
 
 /*Por que elegirnos*/
 .fm-why {
+  box-sizing: border-box;
   position: relative;
+  width: 100%;
   z-index: 1;
 }
 .fm-why::before {
   content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
   background-image: url(../img/maintenance.jpeg);
   filter: brightness(60%);
   background-size: cover;
@@ -254,6 +258,65 @@ h1 {
   text-align: left;
   color: #01aded;
   font-size: 36px;
+}
+
+.fm-testimonials {
+  background-color: #f6f6f6;
+}
+.fm-testimonials .fm-subtitle-top {
+  position: relative;
+  flex-direction: column;
+}
+.fm-testimonials .fm-subtitle {
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+.fm-testimonials .fm-subtitle::before {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #01aded;
+}
+.fm-testimonials .img-area {
+  border: 2px solid #01aded;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.fm-testimonials .img-area img {
+  width: 100%;
+}
+.fm-testimonials .carousel-caption {
+  position: static;
+  padding-bottom: 15px;
+  padding-top: 0;
+}
+.fm-testimonials .carousel-caption h5 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  margin-top: 25px;
+  color: black;
+}
+.fm-testimonials .carousel-caption p {
+  color: #8b8b8b;
+  font-size: 18px;
+  margin: auto;
+  width: 70%;
+  margin-bottom: 10px;
+}
+.fm-testimonials .carousel-indicators {
+  bottom: -35px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  filter: invert(1);
 }
 
 /*# sourceMappingURL=styles.css.map */

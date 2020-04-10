@@ -246,14 +246,18 @@ h1{
 
 /*Por que elegirnos*/
 .fm-why{
+    box-sizing: border-box;
     position: relative;
+    width: 100%;
     z-index: 1;
 
     &::before{
         content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
-        position: absolute;
         background-image: url(../img/maintenance.jpeg);
         filter: brightness(60%);
         background-size: cover;
@@ -297,6 +301,75 @@ h1{
         }
         
     }
+}
+
+.fm-testimonials{
+    background-color: $bg-color;
+
+    .fm-subtitle-top{
+        position: relative;
+        @extend %fm-center;
+        flex-direction: column;
+    }
+
+    .fm-subtitle{
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            background-color: $principal-color;
+        }
+    }
+    
+    .img-area{
+        border: 2px solid $principal-color;
+        width: 100px;
+        height: 100px;
+        margin: auto;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .carousel-caption{
+        position: static;
+        padding-bottom: 15px;
+        padding-top: 0;
+
+        h5{
+            font-size: 26px;
+            margin-bottom: 15px;
+            margin-top: 25px;
+            color: black;
+        }
+
+        p{
+            color: #8b8b8b;
+            font-size: 18px;
+            margin: auto;
+            width: 70%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .carousel-indicators{
+        bottom: -35px;
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(1);
 }
 
 
