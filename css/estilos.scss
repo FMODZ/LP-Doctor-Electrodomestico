@@ -28,6 +28,19 @@ body{
     font-size: $p-size;
 }
 
+::placeholder {
+    color: white !important;
+    opacity: 8; 
+  }
+  
+  :-ms-input-placeholder { 
+    color: white !important;
+  }
+  
+  ::-ms-input-placeholder {
+    color: white !important;
+  }
+
 a{
     color: $secondary-color;
     &:hover{
@@ -71,6 +84,18 @@ textarea{
     align-items: center;
 }
 
+%fm-opacity{
+    transition: opacity 1s ease;
+    opacity: 0;
+}
+
+
+
+@mixin fmFades($position){
+    transition: $position 800ms ease;
+    #{$position}: -1000px;
+}
+
 @mixin fmBotones($color, $fondo){
     color: $color;
     background-color: #01aded;
@@ -96,6 +121,28 @@ h1{
 /*Colores*/
 .fm-bg-gray{
     background-color: $bg-color;
+}
+
+/*Estios generales*/
+
+.fade-left, .fade-choose-left{
+    @include fmFades(left);
+}
+.fade-right, .fade-choose-right{
+    @include fmFades(right);
+}
+
+.fm-rotate{
+    animation: rotateimg 1s ease-in-out;
+}
+@keyframes rotateimg {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#servicesrow, #chooserow{
+    @extend %fm-opacity;
 }
 
 /*Float Button*/
@@ -290,6 +337,8 @@ h1{
 }
 
 .fm-image-main{
+    transition: opacity 1s ease;
+    opacity: 0;
     box-sizing: border-box;
     position: relative;
     width: 100%;
@@ -324,6 +373,12 @@ h1{
         color: $principal-color;
     }
 
+    .fm-card-description{
+        cursor: default;
+ 
+    }
+
+
     .fm-card-body{
         font-size: 14px;
         text-align: center;
@@ -344,6 +399,9 @@ h1{
     background-color: #fff;
 
     .fm-subtitle-top{
+        transition: bottom 1s ease;
+        opacity: 0;
+        bottom: -200px;
         position: relative;
         @extend %fm-center;
         flex-direction: column;
@@ -367,6 +425,21 @@ h1{
 
     .fm-services{
         background: #ffffff;
+    }
+
+    .card{
+        overflow: hidden;
+
+        .card-body{
+            z-index: 1;
+        }
+        .card-img-top{
+            transition: all 500ms;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
     }
     
     .fm-card-title{
@@ -396,6 +469,11 @@ h1{
         background-position:center ;
         background-attachment: fixed;
         z-index: -1;
+    }
+
+    .fm-subtitle-why{
+        transition: opacity 1s ease;
+        opacity: 0;
     }
 
     .fm-subtitle{

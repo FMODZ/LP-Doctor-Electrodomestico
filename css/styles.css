@@ -22,6 +22,19 @@ body {
   font-size: 16px;
 }
 
+::placeholder {
+  color: white !important;
+  opacity: 8;
+}
+
+:-ms-input-placeholder {
+  color: white !important;
+}
+
+::-ms-input-placeholder {
+  color: white !important;
+}
+
 a {
   color: #003C6B;
 }
@@ -62,6 +75,11 @@ textarea:focus {
   align-items: center;
 }
 
+#servicesrow, #chooserow {
+  transition: opacity 1s ease;
+  opacity: 0;
+}
+
 .fm-btn-main {
   color: white;
   background-color: #01aded;
@@ -84,6 +102,26 @@ h1 {
   background-color: #f6f6f6;
 }
 
+/*Estios generales*/
+.fade-left, .fade-choose-left {
+  transition: left 800ms ease;
+  left: -1000px;
+}
+
+.fade-right, .fade-choose-right {
+  transition: right 800ms ease;
+  right: -1000px;
+}
+
+.fm-rotate {
+  animation: rotateimg 1s ease-in-out;
+}
+
+@keyframes rotateimg {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /*Float Button*/
 .fm-float-button {
   position: fixed;
@@ -252,6 +290,8 @@ h1 {
 }
 
 .fm-image-main {
+  transition: opacity 1s ease;
+  opacity: 0;
   box-sizing: border-box;
   position: relative;
   width: 100%;
@@ -283,6 +323,9 @@ h1 {
   font-size: 35px;
   color: #01aded;
 }
+.fm-cards .fm-card-description {
+  cursor: default;
+}
 .fm-cards .fm-card-body {
   font-size: 14px;
   text-align: center;
@@ -300,6 +343,9 @@ h1 {
   background-color: #fff;
 }
 .fm-services .fm-subtitle-top {
+  transition: bottom 1s ease;
+  opacity: 0;
+  bottom: -200px;
   position: relative;
   flex-direction: column;
 }
@@ -319,6 +365,18 @@ h1 {
 }
 .fm-services .fm-services {
   background: #ffffff;
+}
+.fm-services .card {
+  overflow: hidden;
+}
+.fm-services .card .card-body {
+  z-index: 1;
+}
+.fm-services .card .card-img-top {
+  transition: all 500ms;
+}
+.fm-services .card .card-img-top:hover {
+  transform: scale(1.2);
 }
 .fm-services .fm-card-title {
   text-transform: uppercase;
@@ -345,6 +403,10 @@ h1 {
   background-position: center;
   background-attachment: fixed;
   z-index: -1;
+}
+.fm-why .fm-subtitle-why {
+  transition: opacity 1s ease;
+  opacity: 0;
 }
 .fm-why .fm-subtitle {
   text-align: center;
