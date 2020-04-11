@@ -145,6 +145,46 @@ h1{
     @extend %fm-opacity;
 }
 
+.fm-loading{
+    transition: all 500ms ease;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #8d8d8d;
+    overflow: hidden !important;
+
+    img{
+        animation: loading 4s infinite;
+    }
+
+    @keyframes loading {
+        0%{
+            width: 25%;
+        }
+        16%{
+            width: 35%;
+        }
+        33%{
+            width: 25%;
+        }
+        50%{
+            width: 35%;
+        }
+        66%{
+            width: 25%;
+            opacity: 1;
+        }
+        85%{
+            width: 35%;
+        }
+        100%{
+            width: 25%;
+            opacity: 0;
+        }
+    }
+}
+
 /*Float Button*/
 .fm-float-button{
     position: fixed;

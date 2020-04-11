@@ -1,6 +1,17 @@
 $(document).ready(function(){
 
-     /*Funciones */
+    $('html, body').css({
+        "overflow": "hidden"
+    });
+    setTimeout(() => {
+
+        $('html, body').css({
+            "overflow": "auto"
+        });
+
+        $(".fm-loading").remove();
+
+        /*Funciones */
      function toggle(){
         var array = ['#scrollhome', '#scrollservices', '#scrollchoose', '#scrolltestimonials', '#scrollcontact'];
         $.each(array, (index, value) => {
@@ -104,4 +115,8 @@ $(document).ready(function(){
     var choose = $("#choose").offset().top;
     var testimonials = $("#testimonials").offset().top;
     var contact = $("#contact").offset().top;
+    }, 3000);
+
+    
+     
 });
