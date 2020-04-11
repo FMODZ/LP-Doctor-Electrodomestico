@@ -13,9 +13,19 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   font-size: 16px;
+}
+
+a {
+  color: #003C6B;
+}
+a:hover {
+  text-decoration: none;
+}
+a:visited {
+  color: #003C6B;
 }
 
 input[type=text] {
@@ -133,7 +143,11 @@ h1 {
 .fm-nav .fm-nav-item {
   padding: 10px 15px;
 }
+.fm-nav .fm-margin-nav {
+  margin: 27px 0;
+}
 .fm-nav .item-main {
+  padding: 10px 15px;
   font-weight: 500;
   position: relative;
   padding: 30px;
@@ -371,6 +385,24 @@ h1 {
 }
 .fm-contact .fm-ul-contact .fm-ul-item:hover, .fm-contact .fm-ul-contact .fm-ul-item .fm-icon {
   color: #01aded;
+}
+
+@media (max-width: 850px) {
+  .fm-nav {
+    display: none;
+  }
+}
+@media (max-width: 474px) {
+  body h1, body h4 {
+    font-size: 24px !important;
+  }
+  body p {
+    font-size: 16px !important;
+  }
+
+  .fm-why, .fm-card-why {
+    min-height: 120px !important;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

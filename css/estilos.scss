@@ -19,9 +19,19 @@ $p-size: 16px;
 }
 
 body{
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: $p-size;
+}
+
+a{
+    color: $secondary-color;
+    &:hover{
+        text-decoration: none;
+    }
+    &:visited{
+        color: $secondary-color;
+    }
 }
 
 input[type="text"]{
@@ -155,8 +165,13 @@ h1{
     .fm-nav-item{
         padding: 10px 15px;
     }
+
+    .fm-margin-nav{
+        margin: 27px 0;
+    }
     
     .item-main{
+        padding: 10px 15px;
         font-weight: 500;
         position: relative;
         padding: 30px;
@@ -437,6 +452,29 @@ h1{
         }
     }
 
+}
+
+@media (max-width : 850px){
+    .fm-nav{
+        display: none;
+    }
+}
+
+@media (max-width: 474px){
+    body{
+        h1,h4{
+            font-size: 24px !important;
+        }
+
+        p{
+            font-size: 16px !important;
+        }  
+    }
+
+    .fm-why, .fm-card-why{
+        min-height: 120px !important;
+    }
+    
 }
 
 
