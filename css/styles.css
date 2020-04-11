@@ -110,10 +110,7 @@ h1 {
 .toTop {
   cursor: pointer;
 }
-.toTop a {
-  color: white;
-}
-.toTop a:hover {
+.toTop:hover {
   color: white;
 }
 
@@ -678,7 +675,7 @@ aside .fm-mobile-top img {
 }
 @media (max-width: 767px) {
   .fm-nav-scroll, .fm-nav {
-    display: none;
+    display: none !important;
   }
 
   .mobile {

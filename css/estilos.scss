@@ -131,13 +131,12 @@ h1{
 
 .toTop{
     cursor: pointer;
-    a{
-        color: white;
-    }
-    a:hover{
+
+    &:hover{
         color: white;
     }
 }
+
 
 .fade-left, .fade-choose-left{
     @include fmFades(left);
@@ -786,7 +785,7 @@ h1{
 
 @media (max-width: 767px){
     .fm-nav-scroll, .fm-nav{
-        display: none;
+        display: none !important;
     }
 
     .mobile{
