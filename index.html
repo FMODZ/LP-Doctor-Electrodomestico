@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,8 +16,26 @@
     <div class="fm-loading bg-light d-flex align-items-center justify-content-center">
         <img  src="img/logo.png" alt="">
     </div>
-    <div id="fm-page">
-        <div class="fm-float-button d-flex align-items-center justify-content-center"><a href="#home"><i class="fas fa-arrow-up"></i></a></div>
+    <div id="fm-page"> 
+        <aside class="mobile">
+            <div class="fm-mobile-top" id="nav">
+                <i class="fas fa-bars text-white"></i>
+                <img src="img/letras.png" alt="">
+            </div>
+            <ul class="mobile-description">
+                <li class="mobile-interior"><i class="fas fa-phone-alt principal-color"></i><span class="mobile-in">818-68-314-64</span></li>
+                <li class="mobile-interior"><i class="fas fa-phone-alt principal-color"></i><span class="mobile-in">811-21-564-51</span></li>
+                <li class="mobile-interior"><i class="fab fa-facebook-square principal-color"></i><span class="mobile-in">Doctor Electrodomesticos</span></li>
+            </ul>
+            <ul class="mobile-ul">
+                <li class="mobile-li active toTop" id="mobilehome"><a id="#home">Inicio</a></li>
+                <li class="mobile-li" id="mobileservices"><a href="#services">Servicios</a></li>
+                <li class="mobile-li" id="mobilechoose"><a href="#choose">Eligenos</a></li>
+                <li class="mobile-li" id="mobiletestimonials"><a href="#testimonials">Testimonios</a></li>
+                <li class="mobile-li" id="mobilecontact"><a href="#contact">Contacto</a></li>
+            </ul>
+        </aside>
+        <div class="fm-float-button d-flex align-items-center justify-content-center toTop"><a><i class="fas fa-arrow-up"></i></a></div>
         <nav class="fm-nav-scroll">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between">
@@ -28,7 +47,7 @@
                     <div class="fm-nav-right">
                         <div class="fm-nav-scroll-right">
                             <ul class="fm-nav-scroll-ul d-flex align-items-center justify-content-center m-0">
-                                <li class="my-3 fm-nav-li-item"><a class="fm-nav-scroll-item fm-scroll-active" id="scrollhome" href="#home">Inicio</a></li>
+                                <li class="my-3 fm-nav-li-item toTop"><a class="fm-nav-scroll-item fm-scroll-active" id="scrollhome">Inicio</a></li>
                                 <li class="my-3 fm-nav-li-item"><a class="fm-nav-scroll-item" id="scrollservices" href="#services">Servicios</a></li>
                                 <li class="my-3 fm-nav-li-item"><a class="fm-nav-scroll-item" id="scrollchoose" href="#choose">Eligenos</a></li>
                                 <li class="my-3 fm-nav-li-item"><a class="fm-nav-scroll-item"  id="scrolltestimonials" href="#testimonials">Testimonios</a></li>
@@ -50,7 +69,7 @@
                     <li class="fm-nav-item"><i class="fab fa-facebook-square"></i><span class="fm-nav-top-item">Doctor Electrodomesticos</span></li>
                 </ul>
                 <ul class="fm-nav-main">
-                    <li class="fm-margin-nav"><a class="item-main" href="#home">Inicio</a></li>
+                    <li class="fm-margin-nav"><a class="item-main-active" href="#home">Inicio</a></li>
                     <li class="fm-margin-nav"><a class="item-main" href="#services">Servicios</a></li>
                     <li class="fm-margin-nav"><a class="item-main" href="#choose">Eligenos</a></li>
                     <li class="fm-margin-nav"><a class="item-main" href="#testimonials">Testimonios</a></li>
@@ -58,7 +77,7 @@
                 </ul>
             </div>
         </nav>
-        <section class="fm-image-main pt-5 pb-5" >
+        <section class="fm-image-main pt-5 pb-5">
             <div class="container py-5">
                 <h1 class="text-white text-shadow overflow-hidden fm-title-main">Doctor Electrodomestico</h1>
                 <p class="py-3 text-white fm-main-text">Servicio de reparación y/o mantenimiento de aparatos electrodomésticos y linea blanca

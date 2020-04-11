@@ -112,6 +112,10 @@ textarea{
 }
 
 /*Textos*/
+
+.principal-color{
+    color: $principal-color;
+}
 h1{
     font-family: Anton;
     letter-spacing: 10px;
@@ -124,6 +128,16 @@ h1{
 }
 
 /*Estios generales*/
+
+.toTop{
+    cursor: pointer;
+    a{
+        color: white;
+    }
+    a:hover{
+        color: white;
+    }
+}
 
 .fade-left, .fade-choose-left{
     @include fmFades(left);
@@ -139,6 +153,10 @@ h1{
     to{
         transform: rotate(360deg);
     }
+}
+
+.nav-mobile{
+    left:0px;
 }
 
 #servicesrow, #chooserow{
@@ -213,8 +231,77 @@ h1{
     }
 }
 
+/*Nav Mobile*/
+
+   aside{
+       display: none;
+       z-index: 2;
+       transition: left .5s ease;
+       position: fixed;
+       left: -200px;
+       width: 200px;
+       height: 100vh;
+       background-color: $bg-color;
+       box-shadow: 0px 0px 20px rgba($color: #000000, $alpha: 0.5);
+
+       .active{
+           transition: all 500ms ease;
+            background-color: $principal-color;
+            a{
+                color: white;
+            }
+        }   
+
+        .mobile-description{
+            font-size: 12px;
+
+            .mobile-interior{
+                margin: 10px 0 10px 10px;
+
+                .mobile-in{
+                    margin-left: 5px;
+                }
+            }
+        }
+
+       .mobile-ul{
+           width: 100%;
+           list-style: none;
+
+           .mobile-li{
+               height: 50px;
+               a{
+                   display: block;
+                   padding: 13px;
+               }
+           }
+       }
+
+       &::after{
+           content: '';
+           z-index: -1;
+           background-color: $principal-color;
+           position: absolute;
+           top: 0;
+           left: 200px;
+           width: 767px;
+           height: 45px;
+       }
+
+       .fm-mobile-top{
+           position: absolute;
+           top: 8px;
+           right: -125px;
+           img{
+               margin-left: 10px;
+               width: 80px;
+           }
+       }
+   }
+
 /*Barra de navegación con scroll*/
 .fm-nav-scroll{
+    display: none;
     position: fixed;
     width: 100%;
     background-color: $principal-color;
@@ -371,6 +458,25 @@ h1{
         }
     
         &:hover::before{
+            width: 100%;
+        }
+    }
+
+    .item-main-active{
+        padding: 10px 15px;
+        font-weight: 500;
+        position: relative;
+        padding: 30px;
+        cursor: pointer;
+    
+        &::before{
+            content: '';
+            position: absolute;
+            background-color: $principal-color;
+            transition: width .5s;
+            left: 0;
+            bottom: 0;
+            height: 5px;
             width: 100%;
         }
     }
@@ -681,6 +787,10 @@ h1{
 @media (max-width: 767px){
     .fm-nav-scroll, .fm-nav{
         display: none;
+    }
+
+    .mobile{
+        display: block;
     }
 }
 
