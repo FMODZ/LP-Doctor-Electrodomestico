@@ -84,6 +84,31 @@ h1 {
   background-color: #f6f6f6;
 }
 
+/*Float Button*/
+.fm-float-button {
+  position: fixed;
+  bottom: -60px;
+  right: 40px;
+  width: 60px;
+  height: 60px;
+  background-color: #01aded;
+  color: white;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.fm-float-button a {
+  color: white;
+  padding: 25px;
+}
+.fm-float-button a:visited {
+  color: white;
+}
+.fm-float-button:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
 /*Barra de navegación con scroll*/
 .fm-nav-scroll {
   position: fixed;

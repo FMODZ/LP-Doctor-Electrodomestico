@@ -3,13 +3,15 @@ $(document).ready(function(){
     var choose = $("#choose").offset().top;
     var testimonials = $("#testimonials").offset().top;
     var contact = $("#contact").offset().top;
-    
+
     $(window).scroll(function(){
 
         if($(this).scrollTop()>=138){
             $('.fm-nav-scroll').css("opacity","1");
+            $('.fm-float-button').css("bottom","40px");
         }else{
             $('.fm-nav-scroll').css("opacity","0");
+            $('.fm-float-button').css("bottom","-60px");
         }
 
         if($(this).scrollTop() < services){
