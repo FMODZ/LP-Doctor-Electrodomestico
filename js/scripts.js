@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('html, body').css({
         "overflow": "hidden"
     });
+
     setTimeout(() => {
 
         $('html, body').css({
@@ -28,6 +29,12 @@ $(document).ready(function(){
     $("#nav").on("click", function(){
         $(".mobile").toggleClass("nav-mobile");
     })
+
+    $("#more").on("click", function(){
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#services").offset().top
+        }, 500);
+    });
 
     $(".toTop").on('click', function(){
         $("html, body").animate({scrollTop: 0}, 100);
@@ -119,6 +126,11 @@ $(document).ready(function(){
     
 
     /*Estilos iniciales */
+    $(window).scroll(function() {
+        var scrolledY = $(window).scrollTop();
+        $('.fm-image-main').css('background-position', '0px ' + $(document).scrollTop() + 'px');
+      });
+      
     $(".fm-image-main").css("opacity","1");
     $(".fade-left").css("left","0");
     $(".fade-right").css("right","0");
@@ -129,6 +141,14 @@ $(document).ready(function(){
             "bottom": "0"
         });
     }
+     $("#facebook").on("click", function(){
+        window.open("https://www.facebook.com/doctorelectrodomestico/");
+     });
+
+     $("#face").on("click", function(){
+        window.open("https://www.facebook.com/doctorelectrodomestico/");
+     });
+
 
     /*Hover*/
     $(".fm-card-description").hover(function() {

@@ -25,7 +25,7 @@
             <ul class="mobile-description">
                 <li class="mobile-interior"><i class="fas fa-phone-alt principal-color"></i><span class="mobile-in">818-68-314-64</span></li>
                 <li class="mobile-interior"><i class="fas fa-phone-alt principal-color"></i><span class="mobile-in">811-21-564-51</span></li>
-                <li class="mobile-interior"><i class="fab fa-facebook-square principal-color"></i><span class="mobile-in">Doctor Electrodomesticos</span></li>
+                <li class="mobile-interior" id="facebook"><i class="fab fa-facebook-square principal-color"></i><span class="mobile-in">Doctor Electrodomestico</span></li>
             </ul>
             <ul class="mobile-ul">
                 <li class="mobile-li active toTop" id="mobilehome"><a id="#home">Inicio</a></li>
@@ -64,9 +64,9 @@
             </div>
             <div class="fm-nav-right">
                 <ul class="fm-nav-top">
-                    <li class="fm-nav-item"><i class="fas fa-phone-alt"></i><span class="fm-nav-top-item">818-68-314-64</span></li>
-                    <li class="fm-nav-item"><i class="fas fa-phone-alt"></i><span class="fm-nav-top-item">811-21-564-51</span></li>
-                    <li class="fm-nav-item"><i class="fab fa-facebook-square"></i><span class="fm-nav-top-item">Doctor Electrodomesticos</span></li>
+                    <li class="fm-nav-item"><i class="fas fa-phone-alt"></i><span class="fm-nav-top-item ml-2">818-68-314-64</span></li>
+                    <li class="fm-nav-item"><i class="fas fa-phone-alt"></i><span class="fm-nav-top-item ml-2">811-21-564-51</span></li>
+                    <li class="fm-nav-item" id="face"><i class="fab fa-facebook-square"></i><span class="fm-nav-top-item ml-2">Doctor Electrodomestico</span></li>
                 </ul>
                 <ul class="fm-nav-main">
                     <li class="fm-margin-nav"><a class="item-main-active" href="#home">Inicio</a></li>
@@ -79,10 +79,16 @@
         </nav>
         <section class="fm-image-main pt-5 pb-5">
             <div class="container py-5">
-                <h1 class="text-white text-shadow overflow-hidden fm-title-main">Doctor Electrodomestico</h1>
-                <p class="py-3 text-white fm-main-text">Servicio de reparación y/o mantenimiento de aparatos electrodomésticos y linea blanca
-                    Servicio a domicilio en área metropolitana de Monterrey</p>
-                <button class="fm-btn-main">Muestrame más</button>
+                <h1 class="text-white text-shadow overflow-hidden fm-title-main">Doctor Electrodoméstico</h1>
+                <p class="pt-3 text-white fm-main-text">Servicio de reparación y/o mantenimiento de aparatos electrodomésticos y linea blanca a domicilio en el área metropolitana de Monterrey. Reparamos: </p>
+                    <ul>
+                        <li class=" fm-main-text"><i class="h6 cen fas fa-tools principal-color"></i> Lavadoras</li>
+                        <li class="pt-2  fm-main-text"><i class="h6 cen fas fa-tools principal-color"></i> Secadoras</li>
+                        <li class="pt-2  fm-main-text"><i class="h6 cen fas fa-tools principal-color"></i> Refrigeradores</li>
+                        <li class="pt-2  fm-main-text"><i class="h6 cen fas fa-tools principal-color"></i> Boilers</li>
+                        <li class="pt-2  fm-main-text"><i class="h6 cen fas fa-tools principal-color"></i> Estufas</li>
+                    </ul>
+                <button class="mt-3 fm-btn-main" id="more">Muestrame más</button>
             </div>
         </section>
         <section class="fm-cards py-5">
@@ -134,7 +140,7 @@
                 <div class="row" id="servicesrow">
                     <div class="col-xs-12 col-md-4 d-flex justify-content-center">
                         <div class="card border-0" style="width: 18rem;">
-                            <img class="card-img-top" src="img/principal.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="img/reparacion.jpg" alt="Card image cap">
                             <div class="card-body fm-bg-gray">
                               <h5 class="card-title fm-card-title">Reparación</h5>
                               <p class="card-text">Reparaciones garantizadas por escrito.</p>
@@ -143,7 +149,7 @@
                     </div>
                     <div class="col-xs-12 col-md-4 d-flex justify-content-center mt-3 mt-md-0">
                         <div class="card border-0" style="width: 18rem;">
-                            <img class="card-img-top" src="img/principal.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="img/mantenimiento.jpg" alt="Card image cap">
                             <div class="card-body fm-bg-gray">
                               <h5 class="card-title fm-card-title">Mantenimiento</h5>
                               <p class="card-text">Mantenimientos preventivos para el buen funcionamiento electrodoméstico.</p>
@@ -212,23 +218,23 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <div class="img-area">
-                                <img src="img/monse.jpg" alt="...">
+                                <img src="img/angelsaveedra.jpg" alt="Sr.Angel Saavedra">
                             </div>
                             <div class="carousel-caption">
-                              <h5>Monserrat Mendoza</h5>
-                              <p>Excelente servicio! Contrate para el mantenimiento de una lavadora y dejarán como nueva mi lavadora. Con confianza los recomiendo y trabajan muy rápido.</p>
+                              <h5>Angel Saavedra</h5>
+                              <p>Excelente servicio, les llamé y vinieron el mismo día, los recomiendo ya me han reparado mi lavadora y mi secadora.</p>
                             </div>
                         </div>
                       <div class="carousel-item">
                         <div class="img-area">
-                            <img src="img/fili.jpg" alt="...">
+                            <img src="img/marthasalazar.jpg" alt="Sra. Martha Salazar">
                         </div>
                         <div class="carousel-caption">
-                          <h5>Filiberto Salazar</h5>
-                          <p>Me gusto el servicio, me urgía areglar mi refrigerador porque dejo de enfriar, llame a Doctor Electrodomesticos e inmediatamente me dieron una solución, recomendados.</p>
+                          <h5>Martha Salazar</h5>
+                          <p>Mi refrigerador dejó de enfriar y no dudé en llamarlos, tengo años que los recomiendo.</p>
                         </div>
                       </div>
-                      <div class="carousel-item">
+                      <!-- <div class="carousel-item">
                         <div class="img-area">
                             <img src="img/limon.jpg" alt="...">
                         </div>
@@ -236,7 +242,7 @@
                           <h5>Adriana Limón</h5>
                           <p>Me urgía que repararan mi licuadora y pudieron arreglarla sin problemas, recomiendo el servicio por profesionales y por la rapidez de solución.</p>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -251,7 +257,27 @@
         </section>
         <section class="fm-map p-0">
             <div class="container-fluid p-0">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919514.5327516351!2d-100.83451509118012!3d25.808402076500087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662a377e498af83%3A0xde5ad0f0777ed7c!2sZona%20metropolitana%20de%20Monterrey%2C%20N.L.!5e0!3m2!1ses!2smx!4v1586562855896!5m2!1ses!2smx" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 p-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919514.5327516351!2d-100.83451509118012!3d25.808402076500087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662a377e498af83%3A0xde5ad0f0777ed7c!2sZona%20metropolitana%20de%20Monterrey%2C%20N.L.!5e0!3m2!1ses!2smx!4v1586562855896!5m2!1ses!2smx" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                    <div class="col-xs-12 col-md-6 pl-5 fm-zones">
+                        <div class="fm-subtitle-top my-5" id="">
+                            <p class="h5 fm-subtitle mb-4 pb-3 ">Zonas de cobertura</p>
+                        </div>
+                        <ul>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Monterrey</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> San Nicolas de los Garza</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Guadalupe</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Apodaca</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Escobedo</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Juárez</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i>  San Pedro</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Garcia</li>
+                            <li><i class="fas fa-map-pin principal-color mr-2"></i> Santa Caterina</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="fm-contact p-5" id="contact">

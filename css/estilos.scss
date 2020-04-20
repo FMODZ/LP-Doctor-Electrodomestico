@@ -16,7 +16,9 @@ $p-size: 16px;
 html{
     scroll-behavior: smooth;
 }
-
+ul{
+    list-style-type: none !important;
+}
 *{
     padding: 0;
     margin: 0;
@@ -128,6 +130,14 @@ h1{
 }
 
 /*Estios generales*/
+
+#facebook,#face{
+    transition: color 500ms ease;
+    cursor: pointer;
+    &:hover{
+        color: #3b5998;
+    }
+}
 
 .toTop{
     cursor: pointer;
@@ -400,6 +410,7 @@ h1{
     }
     
     .fm-nav-top{
+         cursor: default;
         position: relative;
         display: flex;
         justify-content: flex-end;
@@ -501,7 +512,17 @@ h1{
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
-        z-index: -1;
+        z-index: -2;
+    }
+
+    .cen{
+        vertical-align: -7px;
+    }
+    ul{
+        z-index: 2;
+        li{
+            color: white;
+        }
     }
 
     .fm-main-text{
@@ -727,6 +748,51 @@ h1{
     filter: invert(1);
 }
 
+.fm-map{
+    .fm-subtitle-top{
+        transition: bottom 1s ease;
+        opacity: 0;
+        bottom: -200px;
+        position: relative;
+        @extend %fm-center;
+        flex-direction: column;
+    }
+
+    .fm-subtitle{
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: 25%;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            background-color: $principal-color;
+        }
+    }
+
+    .fm-zones{
+        position: relative;
+        &:before{
+            z-index: -1;
+            opacity: .1;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../img/nleon.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+    }
+}
+
 .fm-contact{
     background-color: $secondary-color;
 
@@ -790,6 +856,19 @@ h1{
 
     .mobile{
         display: block;
+    }
+
+    .fm-image-main{
+
+        &::before{
+            background-attachment: scroll;
+        }
+    }
+
+    .fm-why{
+        &::before{
+            background-attachment: scroll;
+        }
     }
 }
 
